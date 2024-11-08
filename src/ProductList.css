@@ -61,8 +61,8 @@ body {
 
 /* Product Card */
 .product-card {
-    flex: 0 0 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap */
-    max-width: calc(26.33% - 20px); /* Adjust max-width for 3 cards per row with 20px gap */
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(26.33% - 20px);
     margin-bottom: 20px;
     padding: 20px;
     background-color: #fff;
@@ -70,26 +70,62 @@ body {
     border-radius: 5px;
     text-align: center;
     position: relative;
-    
     gap: 20px;
 }
 
-/* Pseudo-classes - Hover effect on product button */
-.product-card:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
-    z-index: 1;
-}
-
 .product-title {
-    font-weight: bold;
+    color: #3F1D94;
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
-.product-price {
-    color: #e74c3c;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+.product-cost {
+    color: #FF0000;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.product-button:disabled {
+    background-color: #808080;
+    cursor: not-allowed;
+}
+
+/* Sale badge styling */
+.product-card::before {
+    content: "SALE";
+    background-color: #FF0000;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 15px;
+    border-radius: 0 5px 0 5px;
+}
+
+/* Cart badge styling */
+.cart-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #FF0000;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 14px;
+}
+
+.cart-icon-container {
+    position: relative;
 }
 
 .product-image {
@@ -250,3 +286,16 @@ body {
         text-align: center; /* Align text to the center */
       }
   }
+
+.product-grid h1 {
+    color: #3F1D94;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 32px;
+}
+
+.product-description {
+    color: #666;
+    margin: 10px 0;
+    font-size: 14px;
+}
